@@ -1,0 +1,19 @@
+{
+    "account": [
+        {
+            "id": 123456,
+            "password": "",
+            "sdk_type": "onebot",
+            "platform_type": "qq",
+            "model_type": "gocqhttp_show",
+            "server": {
+                "auto": false,
+                "type": "post",
+                "host": "http://127.0.0.1",
+                "port": 58000,
+                "access_token": "NONETOKEN"
+            },
+            "debug": true
+        }
+    ]
+}
