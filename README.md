@@ -8,7 +8,7 @@ Docker Hub: https://hub.docker.com/repository/docker/rhwong/oliva-dice
 
 本项目旨在快速启用与go-cqhttp对接，并未考虑其他平台。
 
-若需要对接其他平台，你可手动设置挂载出来的配置文件。
+若需要对接其他平台，你可手动挂载配置文件出来修改。
 ## 全新启用
 首先返回用户目录（你也可以指定其他位置）
 ```shell
