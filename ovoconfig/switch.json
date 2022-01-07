@@ -1,0 +1,15 @@
+{
+    "globalEnable": 1,
+    "userConfigCount": 100,
+    "pulseInterval": 300,
+    "autoAcceptGroupAdd": 1,
+    "autoAcceptFriendAdd": 1,
+    "masterList": [
+        [
+            100000,
+            "qq"
+        ]
+    ],
+    "noticeGroupList": [],
+    "pulseUrlList": []
+}
