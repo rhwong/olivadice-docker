@@ -1,4 +1,4 @@
-# 引用 ovoenv 
+# ovoenv 直连
 FROM rhwong/ovoenv:1.2
 WORKDIR /workspace
 # 添加环境
@@ -15,10 +15,10 @@ RUN wget -P /workspace/OlivOS/plugin/app/ https://github.com/OlivOS-Team/OlivaDi
 RUN wget https://github.com/Mrs4s/go-cqhttp/releases/latest/download/go-cqhttp_linux_amd64.tar.gz
 RUN tar -zxvf go-cqhttp_linux_amd64.tar.gz
 # 下载运行脚本及配置文件
-RUN wget https://www.aobacore.com/Git/ovo/start.sh -O start.sh -N
-RUN wget -P /workspace/gocqfile https://www.aobacore.com/Git/ovo/config.yml -N
-RUN wget -P /workspace/OlivOS/conf https://www.aobacore.com/Git/ovo/account.json -N
-RUN wget -P /workspace/OlivOS/plugin/data/OlivaDice/unity/console https://www.aobacore.com/Git/ovo/switch.json -N
+RUN wget https://raw.githubusercontent.com/rhwong/olivadice-docker/main/bat/start.sh
+RUN wget -P /workspace/gocqfile https://raw.githubusercontent.com/rhwong/olivadice-docker/main/gocqconfig/config.yml -N
+RUN wget -P /workspace/OlivOS/conf https://raw.githubusercontent.com/rhwong/olivadice-docker/main/ovoconfig/account.json -N
+RUN wget -P /workspace/OlivOS/plugin/data/OlivaDice/unity/console https://raw.githubusercontent.com/rhwong/olivadice-docker/main/ovoconfig/switch.json -N
 # 给予权限
 RUN chmod -R 766 /workspace
 # 启动

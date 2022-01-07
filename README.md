@@ -1,4 +1,4 @@
-# ovodice_docker
+# olivadice-docker
 Docker Hub: https://hub.docker.com/repository/docker/rhwong/oliva-dice
 # oliva-dice docker部署教程
 ## 简介
@@ -70,6 +70,7 @@ docker exec -it oliva bash -c "wget -P /workspace/OlivOS/plugin/app/ https://插
 ## 更新版本
 
 先停止删除旧的容器
+
  `docker stop oliva & docker rm oliva` 
 
 旧的镜像可以不删除，拉取新版本会更快
@@ -94,6 +95,9 @@ docker run -it --name="oliva" -m 512M \
 ```
 
 Froked by 
+
 https://github.com/Mrs4s/go-cqhttp
+
 https://github.com/OlivOS-Team/OlivOS
+
 https://github.com/OlivOS-Team/OlivaDiceCore
