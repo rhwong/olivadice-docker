@@ -23,7 +23,7 @@ wget -P ./OlivOS/plugin/data/OlivaDice/unity/console https://www.aobacore.com/Gi
 拉取镜像
 
 ```shell
-docker pull rhwong/oliva-dice:3.1.6.1011.2
+docker pull rhwong/oliva-dice:3.1.8
 ```
 ### 容器创建
 ```shell
@@ -32,7 +32,7 @@ docker run -it --name="oliva" -m 512M \
 -v "$(pwd)"/OlivOS/logfile:/workspace/OlivOS/logfile \
 -v "$(pwd)"/OlivOS/plugin/data:/workspace/OlivOS/plugin/data  \
 -v "$(pwd)"/OlivOS/gocqfile:/workspace/gocqfile \
---restart=always rhwong/oliva-dice:3.1.6.1011.2
+--restart=always rhwong/oliva-dice:3.1.8
 ```
 
 123456处自行替换成你bot的QQ号码，100000处替换主人QQ。扫码登录即可正常运行bot
@@ -77,7 +77,7 @@ docker exec -it oliva bash -c "wget -P /workspace/OlivOS/plugin/app/ https://插
 旧的镜像可以不删除，拉取新版本会更快
 
 ```shell
-docker pull rhwong/oliva-dice:3.1.6.1011.2
+docker pull rhwong/oliva-dice:3.1.8
 ```
 ### 启动容器
 
@@ -92,7 +92,7 @@ docker run -it --name="oliva" -m 512M \
 -v "$(pwd)"/OlivOS/logfile:/workspace/OlivOS/logfile \
 -v "$(pwd)"/OlivOS/plugin/data:/workspace/OlivOS/plugin/data  \
 -v "$(pwd)"/OlivOS/gocqfile:/workspace/gocqfile \
---restart=always rhwong/oliva-dice:3.1.6.1011.2
+--restart=always rhwong/oliva-dice:3.1.8
 ```
 Froked by 
 
