@@ -19,6 +19,7 @@ RUN pip install -r /workspace/OlivOS/requirements.txt -i https://pypi.tuna.tsing
 RUN wget -P /workspace/OlivOS/plugin/app/ https://github.com/OlivOS-Team/OlivaDiceCore/releases/latest/download/OlivaDiceCore.opk
 RUN wget -P /workspace/OlivOS/plugin/app/ https://github.com/OlivOS-Team/OlivaDiceJoy/releases/latest/download/OlivaDiceJoy.opk
 RUN wget -P /workspace/OlivOS/plugin/app/ https://github.com/OlivOS-Team/OlivaDiceLogger/releases/latest/download/OlivaDiceLogger.opk
+RUN wget -P /workspace/OlivOS/plugin/app/ https://github.com/OlivOS-Team/OlivaDiceMaster/releases/latest/download/OlivaDiceMaster.opk
 # 安装go-cqhttp
 RUN wget https://github.com/Mrs4s/go-cqhttp/releases/latest/download/go-cqhttp_linux_amd64.tar.gz
 RUN tar -zxvf go-cqhttp_linux_amd64.tar.gz
