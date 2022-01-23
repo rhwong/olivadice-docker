@@ -8,7 +8,7 @@ Docker Hub: https://hub.docker.com/repository/docker/rhwong/oliva-dice
 
 本项目旨在快速启用与go-cqhttp对接，并未考虑其他平台。
 
-若需要对接其他平台，你可手动挂载配置文件出来修改。
+若需要对接其他平台，你可手动设置挂载出来的配置文件。
 ## 全新启用
 首先返回用户目录（你也可以指定其他位置）
 ```shell
@@ -23,19 +23,19 @@ wget -P ./OlivOS/plugin/data/OlivaDice/unity/console https://www.aobacore.com/Gi
 拉取镜像
 
 ```shell
-docker pull rhwong/oliva-dice:3.1.6.1011
+docker pull rhwong/oliva-dice:3.1.6.1011.2
 ```
-### 启动容器
+### 容器创建
 ```shell
 docker run -it --name="oliva" -m 512M \
 -e BOTQQ="123456" -e MASTER="100000" \
 -v "$(pwd)"/OlivOS/logfile:/workspace/OlivOS/logfile \
 -v "$(pwd)"/OlivOS/plugin/data:/workspace/OlivOS/plugin/data  \
 -v "$(pwd)"/OlivOS/gocqfile:/workspace/gocqfile \
---restart=always rhwong/oliva-dice:3.1.6.1011
+--restart=always rhwong/oliva-dice:3.1.6.1011.2
 ```
 
-1008611处自行替换成你bot的QQ号码，1000000处替换主人QQ。扫码登录即可正常运行bot
+123456处自行替换成你bot的QQ号码，100000处替换主人QQ。扫码登录即可正常运行bot
 
 如果你的终端支持显示字符二维码，就可以直接扫码。如果不支持，打开此文件来扫码：`./OlivOS/gocqfile/qrcode.png`
 
@@ -53,7 +53,9 @@ docker run -it --name="oliva" -m 512M \
 
 若有其他配置文件和插件，可以在创建docker的时候挂载进去
 
-若出现登录失效、冻结等情况，可以直接删除该容器
+若出现登录失效、冻结等情况，重启容器就能重新登录了
+
+若修改了密码，先停止并删除容器，重复最开始的容器创建操作即可，数据已经挂载到 `./OlivOS` 文件夹了
 
  `docker stop oliva & docker rm oliva` 
 
@@ -70,13 +72,12 @@ docker exec -it oliva bash -c "wget -P /workspace/OlivOS/plugin/app/ https://插
 ## 更新版本
 
 先停止删除旧的容器
-
  `docker stop oliva & docker rm oliva` 
 
 旧的镜像可以不删除，拉取新版本会更快
 
 ```shell
-docker pull rhwong/oliva-dice:3.1.6.1011
+docker pull rhwong/oliva-dice:3.1.6.1011.2
 ```
 ### 启动容器
 
@@ -91,9 +92,8 @@ docker run -it --name="oliva" -m 512M \
 -v "$(pwd)"/OlivOS/logfile:/workspace/OlivOS/logfile \
 -v "$(pwd)"/OlivOS/plugin/data:/workspace/OlivOS/plugin/data  \
 -v "$(pwd)"/OlivOS/gocqfile:/workspace/gocqfile \
---restart=always rhwong/oliva-dice:3.1.6.1011
+--restart=always rhwong/oliva-dice:3.1.6.1011.2
 ```
-
 Froked by 
 
 https://github.com/Mrs4s/go-cqhttp
